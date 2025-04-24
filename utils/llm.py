@@ -3,11 +3,11 @@ import requests
 from dotenv import load_dotenv
 from together import Together
 
-client = Together(api_key="80be596af04739688b897671ef48c0357b11364dcf5bdb1d23a91dffc3f9f014")
+client = Together(api_key=os.getenv("TOKEN"))
 
 load_dotenv()
 
-TOGETHER_API_KEY = os.getenv("80be596af04739688b897671ef48c0357b11364dcf5bdb1d23a91dffc3f9f014")
+TOGETHER_API_KEY = os.getenv("TOKEN")
 
 
 async def generate_story(prompt: str) -> str:
